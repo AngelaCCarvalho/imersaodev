@@ -30,6 +30,7 @@ body {
 .content {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 2px rgba(255, 217, 0, 0.507);
   padding: 20px 40px;
   border-radius: 8px;
 }
