@@ -27,28 +27,30 @@ function jogar(){
 
   //Escolha do Usuário
  let escolhaJogador = prompt("Faça sua escolha: [1] Pedra, [2] Papel ou [3] Tesoura?")
+ let escolhaJogador1 = parseInt(escolhaJogador)
  let escolhaComputador = Math.floor(Math.random() * 3) + 1;
 
- //Verificação se o usuário digitou número errado
-  if(escolhaJogador > 3 || escolhaJogador <1 || isNaN(escolhaJogador)){
-     alert("Valor Inválido! Tente Novamente!");
-    return;
-   }
 
    //Exebição da escolha pelo jogar e computador
   alert("Escolha Jogador:  " + escolhaJogador + "  " + " - Escolha do Computador:  " + escolhaComputador)  
+
+  //Verificação se o usuário digitou número errado
+  if(escolhaJogador1 > 3 || escolhaJogador1 <1 || isNaN(escolhaJogador)){
+    alert("Valor Inválido! Tente Novamente!");
+   return;
+  }
    
   //Fucionalidade do jogo
-   if(escolhaJogador == escolhaComputador){
-     alert("Empate!")
-   }
-  if(
-     (escolhaJogador === 1 && escolhaComputador === 3)|| // Pedra Ganha de Tesoura
-     (escolhaJogador === 2 && escolhaComputador === 1)|| // Papel ganha de Pedra
-     (escolhaJogador === 3 && escolhaComputador === 2)  // Tesoura ganha de Papel
-   ){
-     alert("Jogador Venceu!")     
-    }else{
-      alert("Computador Venceu!")
+   if(escolhaJogador1 == escolhaComputador){
+     alert("Empate!");
+     }else if(escolhaJogador1 === 1 && escolhaComputador === 3){
+      alert("Jogador Venceu!");// Pedra Ganha de Tesoura
+     } else if(escolhaJogador1 === 2 && escolhaComputador === 1){
+      alert("Jogador Venceu!");// Papel ganha de Pedra
+     } else if(escolhaJogador1 === 3 && escolhaComputador === 2){
+      alert("Jogador Venceu");// Tesoura ganha de Papel
+     }  
+   else{
+      alert("Computador Venceu!");
     }
   }
