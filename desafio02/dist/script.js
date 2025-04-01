@@ -1,30 +1,33 @@
+//Saudação
+alert("Bem vindo, ao meu segundo projeto do Imersão Dev - Alura")
+alert("Clique no botão para iniciar!")
 
-//Escolha da Idade pelo usuário
-idade = prompt("Qual a sua idade?"); 
 let podeJogar = false; 
 
-//verificação se é Maior ou menor que 18
-if(idade>=18){
-  alert("Você pode prosseguir e jogar Jokenpô");
-  podeJogar = true;
-  jogar(); // Executa o jogo imediatamente
- }else{
-  alert("Você não pode processeguir!")
- }
- 
- if (podeJogar) {
-  jogar();
-}
+//adquire o botão pelo ID
+const botaoIniciar = document.getElementById("iniciarJogo")
+
+botaoIniciar.addEventListener("click", jogar)
+
 //Fucionalidae do botão
 function jogar(){
-  if(!podeJogar){
-    alert("Não pode processeguir, você é menor de idade!");
-    return;
+  if(!podeJogar){ 
+//Escolha da Idade pelo usuário
+   idade = prompt("Qual a sua idade?");
+//verificação se é Maior ou menor que 18
+  if(idade>=18){
+  alert("Você pode prosseguir e jogar Jokenpô");
+  podeJogar = true;
+    jogar(); // Inicia o jogo ao apertar o botão
+ }else{
+  alert("Você não pode processeguir!")
+   return;
+ }
   }
 
   //Escolha do Usuário
- escolhaJogador = prompt("Faça sua escolha: [1] Pedra, [2] Papel ou [3] Tesoura?")
- escolhaComputador = Math.floor(Math.random() * 3) + 1;
+ let escolhaJogador = prompt("Faça sua escolha: [1] Pedra, [2] Papel ou [3] Tesoura?")
+ let escolhaComputador = Math.floor(Math.random() * 3) + 1;
 
  //Verificação se o usuário digitou número errado
   if(escolhaJogador > 3 || escolhaJogador <1 || isNaN(escolhaJogador)){
@@ -36,12 +39,13 @@ function jogar(){
   alert("Escolha Jogador:  " + escolhaJogador + "  " + " - Escolha do Computador:  " + escolhaComputador)  
    
   //Fucionalidade do jogo
-   if(escolhaJogador === escolhaComputador){
+   if(escolhaJogador == escolhaComputador){
      alert("Empate!")
-   }else if(
+   }
+  if(
      (escolhaJogador === 1 && escolhaComputador === 3)|| // Pedra Ganha de Tesoura
      (escolhaJogador === 2 && escolhaComputador === 1)|| // Papel ganha de Pedra
-     (escolhaJogador === 3 && escolhaComputador === 2)   // Tesoura ganha de Papel
+     (escolhaJogador === 3 && escolhaComputador === 2)  // Tesoura ganha de Papel
    ){
      alert("Jogador Venceu!")     
     }else{
