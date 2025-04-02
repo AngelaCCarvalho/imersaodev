@@ -21,7 +21,7 @@ function jogar(){
     jogar(); // Inicia o jogo ao apertar o botão
  }else{
   alert("Você não pode processeguir!")
-   return;
+   return;..
  }
   }
 
