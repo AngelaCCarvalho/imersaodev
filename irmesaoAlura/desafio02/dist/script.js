@@ -1,3 +1,4 @@
+document.addEventListener('')
 //Saudação
 alert("Bem vindo, ao meu segundo projeto do Imersão Dev - Alura")
 alert("Clique no botão para iniciar!")
