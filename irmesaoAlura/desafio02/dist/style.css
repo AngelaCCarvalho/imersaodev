@@ -1,4 +1,5 @@
 /* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Notable&family=Teko:wght@300..700&display=swap');
 body {
   background-color: black;
   margin: 0;
@@ -6,6 +7,10 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(https://raw.githubusercontent.com/AngelaCCarvalho/imagens/refs/heads/main/Gemini_Generated_Image_oku2q5oku2q5oku2.jpg);
 }
 
 /* Logo Styles */
@@ -18,8 +23,7 @@ body {
 }
 
 /* Container with the background image */
-.container {
-  background: url('https://i.postimg.cc/TY28jTqJ/bg4-ia.jpg') no-repeat center center/cover;
+.container {  
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -29,19 +33,29 @@ body {
 /* Content div for text and button */
 .content {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 20px 40px;
   border-radius: 8px;
+  box-shadow: 2px 2px 5px #1ABC9C;
 }
 
+.content h1{
+  color:#1ABC9C;
+  text-shadow: 2px 2px 2px black;
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .content h2 {
   margin-bottom: 20px;
+
 }
 
 /* Button Styles */
 button {
-  background-color: #ff1b7b;
+  background-color: #d41919e7;
   border: none;
+  border-radius: 5px;
   padding: 10px 20px;
   font-size: 1.2em;
   color: white;
@@ -57,4 +71,6 @@ button:hover {
 footer {
   text-align: center;
   padding: 10px;
+  background-color: black;
+  font-family: ver;
 }
