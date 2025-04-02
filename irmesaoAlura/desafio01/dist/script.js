@@ -1,7 +1,9 @@
+document.addEventListener('load', function(){
+});
 
 //Alertas de Saudação
 alert("Olá, Seja Bem vindo! Esse é meu primeiro projeto do Imersão Dev!")
-alert("Click em *Bora Converter* para começar!")
+alert("Click em *Bora Converter* para começar!");
 
 function conversor(){
     alert("Em instante você começará a conversão!");
