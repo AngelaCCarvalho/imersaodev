@@ -1,34 +1,37 @@
 
 document.addEventListener('DOMContentLoaded',function(){
     
-alert("Bem vindo ao meu terceiro projeto da Imersão Dev - Alura")
-});
+    alert("Bem vindo ao meu terceiro projeto da Imersão Dev - Alura")
+    });
 
-let escolhaComputador = Math.floor(Math.random()*6) + 1;
+    document.getElementById("vamosLa").onclick = function() {
+    rodada = 1;
+    vitória = 0;               
 
-function jogar1(){
-    botao(1)
-}
-function jogar2(){
-    botao(2)    
-}
-function jogar3(){
-    botao(3) 
-}
-function jogar4(){
-    botao(4) 
-}
-function jogar5(){
-    botao(5)
-}
-function jogar6(){
-    botao(6)
-}
+        while(rodada <=3){
 
- function botao(palpite){
-    if(palpite ==escolhaComputador){
-        alert('Parabéns você venceu!')
-    }else{
-        alert("Que pena, você errou! O número era: " + escolhaComputador)
-    }
- }
+            escolhaJogador = prompt("Escolha um número entre 1 e 3");
+            
+            if(escolhaJogador < 1 || escolhaJogador > 3 || isNaN(escolhaJogador) ){
+                alert("Opção Inválida!")
+
+                escolhaComputador = Math.floor(Math.random()*3+1)
+                
+            }if(escolhaJogador == escolhaComputador){
+                alert("Você Venceu a rodada:" + rodada)
+                vitoria++
+                
+            } else{
+                alert("Você perdeu! Tente novamente!")
+                rodada = 10             
+            }
+            rodada++
+        }       
+            if(vitoria == 3){
+             alert("Parabéns, você venceu 3 de 3 rodadas!")
+            }            
+     
+         }
+     
+         
+    

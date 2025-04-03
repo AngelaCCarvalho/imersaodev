@@ -61,10 +61,25 @@ button {
   cursor: pointer;  
   transition: background-color 0.3s ease;
 }
-
+#deNovo{
+  background-color: #b72b2b;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(6, 6, 6, 0.7);
+  padding: 10px 30px;
+  margin: 7px 5px 5px 5px;
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;  
+  transition: background-color 0.3s ease;
+}
+#deNovo:hover{
+   background-color:rgb(128, 162, 240);
+}
 button:hover {
   background-color: rgb(128, 162, 240);
 }
+
 
 /* Footer Styles */
 footer {
